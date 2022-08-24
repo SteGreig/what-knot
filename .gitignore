@@ -1,0 +1,47 @@
+##### Edit Below This Line #####
+
+# Ignore node_modules, dist folder and composer
+node_modules/*
+vendor/*
+dist/*
+
+##### DO NOT EDIT BELOW THIS LINE #####
+
+# ignore all files starting with . or ~
+.*
+~*
+# Don't ignore the gitignore or htaccess #
+!.gitignore
+!.htaccess
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
