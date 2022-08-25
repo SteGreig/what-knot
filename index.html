@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woolfox</title>
+  <title>The What Knot Game - Aquavista</title>
 
   <link rel="stylesheet" href="dist/main.min.css">
 
@@ -13,11 +13,179 @@
   <link rel="icon" href="/favicon.png" sizes="32x32" />
 
 </head>
-<body>
+<body class="overflow-hidden">
 
 
+  <div class="h-screen w-full max-w-screen-lg mx-auto flex flex-col items-center text-center">
+
+    <div class="header flex flex-col items-center"> 
+      <img class="knot my-14 transition-all duration-700" src="img/knot-figure-eight-small.svg">
+      <img class="game-logo transition-all duration-700" src="img/game-logo.svg">
+    </div>
+
+    <div class="relative flex flex-1 w-full">
+    
+      <div class="slide max-w-[500px] active">
+        <div class="mt-auto">
+          <p>Know your bends and hitches?</p>
+          <p>Play our game and test your knowledge to be in with a chance to win a <strong>£200 Amazon voucher</strong>.</p>
+          <button class="start-game next-slide btn mt-6">Play the Game</button>
+        </div>
+        <img class="mt-auto" src="img/aquavista-logo.png">
+      </div>
+
+      <div class="slide max-w-[500px]">
+        <div class="my-auto">
+          <p>Please share a few details with us so we can enter you into our prize draw to win a <strong>£200 Amazon voucher</strong>.</p>
+          <button class="next-slide btn mt-6">Submit and Play</button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-reef.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (1 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Figure of eight knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Reef knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Single sheet bend</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-figure-eight.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (2 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Granny knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Sheet bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Figure of eight knot</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-clove-hitch.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (3 of 8)</p>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Clove hitch</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Cow hitch</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Rolling hitch</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-bowline.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (4 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Slip knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Fisherman's bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Bowline knot</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-sheet-bend.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (5 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Bow knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Sheet bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Alpine knot</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-sheep-shank.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (6 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Matador knot</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Crown bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Sheep knot</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-bowline-on-a-bight.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (7 of 8)</p>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Fisherman's bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Buntline hitch</button>
+          </div>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Bowline on a bight</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="my-auto w-full">
+          <img class="mb-16 mx-auto" src="img/knot-carrick-bend.svg">
+          <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (8 of 8)</p>
+          <div class="relative">
+            <button data-ans="1" class="btn btn--ans">Carrick bend</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Umbilical hitch</button>
+          </div>
+          <div class="relative">
+            <button data-ans="0" class="btn btn--ans">Ashley's bend</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide max-w-[500px]">
+        <div class="my-auto">
+          <p class="font-script text-7xl text-[#36B0C9] mb-3">You Scored</p>
+          <p class="score text-[180px] leading-none font-semibold text-white tracking-[0.2em] pl-7 mb-8"><span></span>/8</p>
+          <p>Thanks for playing.</p>
+          <p>Don't forget to check for an email after the show to see if you're our winner!</p>
+          <button class="back-to-start btn mt-2">Back to Start</button>
+        </div>
+        <img class="mt-auto" src="img/aquavista-logo.png">
+      </div>
+
+    </div>
+
+  </div>
+
   
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="dist/production-dist.js"></script>
 </body>
 </html>

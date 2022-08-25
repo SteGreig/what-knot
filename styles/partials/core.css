@@ -9,8 +9,11 @@ html {
 }
 
 body {
-  @apply font-sans uppercase antialiased leading-relaxed text-black;
-  letter-spacing: 0.4em;
+  @apply font-sans antialiased text-blue font-light text-2xl;
+}
+
+strong {
+  @apply font-semibold;
 }
 
 /* Uses IntersectionObserver to identify when the viewport has scrolled, and then show back to top */

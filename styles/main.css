@@ -13,3 +13,47 @@
 
 /* Custom CSS Here */
 
+.header.shrink {
+  .game-logo {
+    @apply max-w-screen-sm;
+  }
+  .knot {
+    @apply scale-50 my-3 -translate-y-14 opacity-0;
+  }
+}
+
+.btn {
+  @apply uppercase tracking-[0.2em] px-20 py-6 rounded-lg border-thistle border-2 bg-thistle-100 font-semibold;
+}
+
+.btn--ans {
+  @apply px-10 w-[450px] text-[22px] my-3 transition-all duration-700;
+}
+
+.btn--ans.active + img {
+  @apply opacity-100;
+}
+
+.btn--ans.active[data-ans="1"] {
+  @apply border-green-700 border-2 bg-green-100 text-green-700;
+}
+
+.btn--ans.active[data-ans="0"] {
+  @apply border-red-500 border-2 bg-red-50 text-red-500 opacity-60;
+}
+
+p {
+  @apply mb-6 last:mb-0;
+}
+
+.slide {
+  @apply flex flex-col items-center mx-auto max-w-[480px] w-full opacity-0 pointer-events-none transition duration-1000 absolute top-0 left-0 right-0 bottom-0;
+}
+
+.slide.active {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.score {
+  -webkit-text-stroke: 3px #002D5D;
+}

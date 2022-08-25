@@ -2,3 +2,12 @@ opacity-0
 invisible
 opacity-100
 visible
+pointer-events-auto
+pointer-events-none
+absolute
+-right-16
+top-1/2
+-translate-y-1/2
+opacity-0
+transition
+duration-700
