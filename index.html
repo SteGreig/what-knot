@@ -18,25 +18,28 @@
 
   <div class="h-screen w-full max-w-screen-lg mx-auto flex flex-col items-center text-center">
 
-    <div class="header flex flex-col items-center"> 
+    <div class="header flex flex-col items-center relative w-full"> 
       <img class="knot my-14 transition-all duration-700" src="img/knot-figure-eight-small.svg">
-      <img class="game-logo transition-all duration-700" src="img/game-logo.svg">
+      <img class="game-logo transition-all duration-700 pl-8 relative z-20" src="img/game-logo.svg">
+      <img class="wave-1 absolute top-44 left-0 transition-all duration-700 w-full" src="img/wave-line.svg">
+      <img class="wave-2 absolute top-84 left-0 transition-all duration-700 w-full" src="img/wave-line.svg">
     </div>
 
     <div class="relative flex flex-1 w-full">
     
-      <div class="slide max-w-[500px] active">
+      <div class="slide slide--intro max-w-[500px] active">
         <div class="mt-auto">
           <p>Know your bends and hitches?</p>
           <p>Play our game and test your knowledge to be in with a chance to win a <strong>£200 Amazon voucher</strong>.</p>
           <button class="start-game next-slide btn mt-6">Play the Game</button>
         </div>
-        <img class="mt-auto" src="img/aquavista-logo.png">
+        <img class="mt-auto mb-[-2px]" src="img/aquavista-logo.png">
       </div>
 
       <div class="slide max-w-[500px]">
         <div class="my-auto">
           <p>Please share a few details with us so we can enter you into our prize draw to win a <strong>£200 Amazon voucher</strong>.</p>
+          <form></form>
           <button class="next-slide btn mt-6">Submit and Play</button>
         </div>
       </div>
@@ -75,7 +78,7 @@
 
       <div class="slide">
         <div class="my-auto w-full">
-          <img class="mb-16 mx-auto" src="img/knot-clove-hitch.svg">
+          <img class="mt-6 mb-10 mx-auto" src="img/knot-clove-hitch.svg">
           <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (3 of 8)</p>
           <div class="relative">
             <button data-ans="1" class="btn btn--ans">Clove hitch</button>
@@ -91,7 +94,7 @@
 
       <div class="slide">
         <div class="my-auto w-full">
-          <img class="mb-16 mx-auto" src="img/knot-bowline.svg">
+          <img class="mt-6 mb-10 mx-auto" src="img/knot-bowline.svg">
           <p class="uppercase tracking-[0.2em] font-normal"><strong class="font-bold">Guess the knot</strong> (4 of 8)</p>
           <div class="relative">
             <button data-ans="0" class="btn btn--ans">Slip knot</button>
@@ -170,14 +173,14 @@
       </div>
 
       <div class="slide max-w-[500px]">
-        <div class="my-auto">
-          <p class="font-script text-7xl text-[#36B0C9] mb-3">You Scored</p>
-          <p class="score text-[180px] leading-none font-semibold text-white tracking-[0.2em] pl-7 mb-8"><span></span>/8</p>
+        <div class="mt-auto">
+          <p class="font-script text-6xl text-[#36B0C9] -mb-4">You Scored</p>
+          <p class="score text-[160px] leading-none font-semibold text-white tracking-[0.2em] pl-7 mb-4"><span></span>/8</p>
           <p>Thanks for playing.</p>
           <p>Don't forget to check for an email after the show to see if you're our winner!</p>
           <button class="back-to-start btn mt-2">Back to Start</button>
         </div>
-        <img class="mt-auto" src="img/aquavista-logo.png">
+        <img class="mt-auto mb-[-2px]" src="img/aquavista-logo.png">
       </div>
 
     </div>

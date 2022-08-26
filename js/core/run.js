@@ -27,8 +27,25 @@ startGameBtn.addEventListener('click', function() {
   header.classList.add('shrink');
 })
 
-backToStartBtn.addEventListener('click', function() {
-  window.location.reload();
+backToStartBtn.addEventListener('click', function(e) {
+
+  e.target.closest('.slide').classList.remove('active');
+
+  setTimeout(() => {
+    document.querySelector('.slide--intro').classList.add('active');
+    header.classList.remove('shrink');
+  }, "800")
+  
+  ansBtns.forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+
+  document.querySelector('form').reset();
+
+  score = 0;
+
+  console.log(score);
+  
 })
 
 

@@ -15,10 +15,17 @@
 
 .header.shrink {
   .game-logo {
-    @apply max-w-screen-sm;
+    @apply max-w-128;
   }
   .knot {
     @apply scale-50 my-3 -translate-y-14 opacity-0;
+  }
+
+  .wave-1 {
+    @apply top-12;
+  }
+  .wave-2 {
+    @apply top-52;
   }
 }
 
