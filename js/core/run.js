@@ -6,22 +6,21 @@ const backToStartBtn = document.querySelector('.back-to-start');
 let score = 0;
 
 nextSlideBtns.forEach(function(btn) {
-
   btn.addEventListener('click', function(e) {
-
-    const thisSlide = e.target.closest('.slide');
-    const nextSlide = thisSlide.nextElementSibling;
-
-    thisSlide.classList.remove('active');
-    
-    setTimeout(() => {
-      nextSlide.classList.add('active');
-    }, "800")
-
+    showNextSlide(e);
   })
-
 });
 
+const showNextSlide = function(e) {
+  const thisSlide = e.target.closest('.slide');
+  const nextSlide = thisSlide.nextElementSibling;
+
+  thisSlide.classList.remove('active');
+  
+  setTimeout(() => {
+    nextSlide.classList.add('active');
+  }, "800")
+}
 
 startGameBtn.addEventListener('click', function() {
   header.classList.add('shrink');
@@ -90,3 +89,44 @@ ansBtns.forEach(function(btn) {
   }
 
 });
+
+$(document).ready( function () {
+  var mcForm = $('#mc-embedded-subscribe-form');
+  var fName = document.querySelector('input[name="FNAME"]');
+  var lName = document.querySelector('input[name="LNAME"]');
+  var email = document.querySelector('input[name="EMAIL"]');
+
+  if ( mcForm.length > 0 ) {
+      $('#mc-embedded-subscribe-form input[type="submit"]').bind('click', function (e) {
+          if (fName.checkValidity() && lName.checkValidity() && email.checkValidity()) {
+            if (e) e.preventDefault();
+            register(mcForm);
+            showNextSlide(e);
+          } else {
+            console.log('validation error');
+          }
+      });
+  }
+});
+
+function register(mcForm) {
+  $.ajax({
+      type: mcForm.attr('method'),
+      url: mcForm.attr('action'),
+      data: mcForm.serialize(),
+      cache       : false,
+      dataType    : 'json',
+      contentType: "application/json; charset=utf-8",
+      error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+      success     : function(data) {
+          if (data.result != "success") {
+              // Something went wrong, do something to notify the user. maybe alert(data.msg);
+              console.log('error');
+              console.log(data.msg);
+          } else {
+              // It worked, carry on...
+              console.log('it worked!');
+          }
+      }
+  });
+}

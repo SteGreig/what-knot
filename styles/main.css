@@ -54,7 +54,7 @@ p {
 }
 
 .slide {
-  @apply flex flex-col items-center mx-auto max-w-[480px] w-full opacity-0 pointer-events-none transition duration-1000 absolute top-0 left-0 right-0 bottom-0;
+  @apply flex flex-col items-center mx-auto max-w-screen-xs w-full opacity-0 pointer-events-none transition duration-1000 absolute top-0 left-0 right-0 bottom-0;
 }
 
 .slide.active {
@@ -63,4 +63,38 @@ p {
 
 .score {
   -webkit-text-stroke: 3px #002D5D;
+}
+
+
+/* Mailchimp form */
+
+form {
+  @apply px-8;
+
+  label {
+    @apply hidden;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    @apply border-2 border-thistle px-6 py-5 w-full my-3 text-xl tracking-wide;
+  }
+
+  input::-webkit-input-placeholder { /* Edge */
+    @apply text-lg tracking-widest text-gray-500 uppercase;
+  }
+
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    @apply text-lg tracking-widest text-gray-500 uppercase;
+  }
+
+  input::placeholder {
+    @apply text-lg tracking-widest text-gray-500 uppercase;
+  }
+
+  input[type="submit"],
+  button,
+  .btn {
+    @apply px-4 w-full;
+  }
 }
